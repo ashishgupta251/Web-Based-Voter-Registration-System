@@ -1,0 +1,16 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore temporary files
+*.log
+*.tmp
+*.bak
+
+# Ignore Word files
+*.doc
+*.docx
+
+# Ignore node or build folders (if added later)
+node_modules/
+dist/
