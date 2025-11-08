@@ -1,0 +1,142 @@
+/* ---------- DARK THEME STYLES ---------- */
+
+/* --- 1. Basic Body & Background --- */
+body.dark-mode {
+  background-image: none; /* Pattern hata dein */
+  background-color: #121212; /* Main dark background */
+  color: #e0e0e0; /* Default light text */
+}
+body.dark-mode::before {
+  content: none; /* Overlay ki zaroorat nahi */
+}
+
+/* --- 2. Header & Footer --- */
+body.dark-mode header,
+body.dark-mode footer {
+  background: #1e1e1e; /* Darker grey */
+  border-bottom: 1px solid #333;
+}
+body.dark-mode header {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* --- 3. All Cards & Containers --- */
+body.dark-mode .about-us-container,
+body.dark-mode .service-card,
+body.dark-mode .stats-container,
+body.dark-mode .faq,
+body.dark-mode .login-container,
+body.dark-mode .register-container,
+body.dark-mode .dashboard-card,
+body.dark-mode .welcome-header,
+body.dark-mode .stat-card,
+body.dark-mode .recent-activity-container {
+  background: #1e1e1e;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border: 1px solid #333;
+}
+
+/* --- 4. Text & Titles --- */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode .logo,
+body.dark-mode .service-card h3,
+body.dark-mode .stat-item p,
+body.dark-mode .about-text h3,
+body.dark-mode .login-container h2,
+body.dark-mode .register-container h2,
+body.dark-mode .dashboard-card h3,
+body.dark-mode .welcome-header h1,
+body.dark-mode .stat-info strong,
+body.dark-mode .recent-activity-container h2,
+body.dark-mode .activity-info p,
+body.dark-mode .faq-item h3 {
+  color: #f1f1f1; /* Bright white text */
+}
+
+body.dark-mode p,
+body.dark-mode label,
+body.dark-mode .about-text p,
+body.dark-mode .service-card p,
+body.dark-mode .faq-item p,
+body.dark-mode .login-container p,
+body.dark-mode .dashboard-card p,
+body.dark-mode .welcome-header p,
+body.dark-mode .stat-info span,
+body.dark-mode .activity-info span,
+body.dark-mode .captcha-label,
+body.dark-mode .captcha-text,
+body.dark-mode .remember-row label,
+body.dark-mode .login-link,
+body.dark-mode .footer-about p,
+body.dark-mode .footer-links ul li a,
+body.dark-mode .footer-contact p {
+  color: #ccc; /* Lighter grey text */
+}
+
+/* --- 5. Forms (Inputs, Selects) --- */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea,
+body.dark-mode .otp-input,
+body.dark-mode #captcha-input {
+  background: #252525;
+  color: #eee;
+  border-color: #444;
+}
+body.dark-mode input:focus,
+body.dark-mode select:focus,
+body.dark-mode textarea:focus,
+body.dark-mode .otp-input:focus {
+  border-color: #0f3d91;
+  box-shadow: 0 0 8px rgba(15,61,145,0.4);
+}
+body.dark-mode #captcha-text {
+  background: #252525;
+  color: #eee;
+  border-color: #444;
+}
+body.dark-mode .separator span {
+  background: #1e1e1e; /* Login "OR" separator */
+  color: #ccc;
+}
+body.dark-mode .separator::before {
+  background: #444;
+}
+
+/* --- 6. Specific Components --- */
+body.dark-mode .news-ticker {
+  background: #1e1e1e;
+  border-bottom-color: #333;
+}
+body.dark-mode .ticker-content span {
+  color: #ccc;
+}
+body.dark-mode .social-login-btn.google {
+  background: #252525;
+  border-color: #444;
+  color: #f1f1f1;
+}
+
+/* --- 7. Chatbot --- */
+body.dark-mode .chatbot {
+  background: #1e1e1e;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+body.dark-mode .chat-body {
+  background: #121212;
+}
+body.dark-mode .chat-message.bot,
+body.dark-mode .typing-indicator {
+  background: #333;
+  color: #f1f1f1;
+}
+body.dark-mode .chat-input {
+  background: #252525;
+  border-top-color: #333;
+}
+body.dark-mode .chat-input input {
+  background: #1e1e1e;
+}

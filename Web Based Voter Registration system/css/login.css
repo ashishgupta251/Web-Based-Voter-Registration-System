@@ -1,0 +1,279 @@
+/* ---------- LOGIN FORM ---------- */
+.login-container {
+  background: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px 35px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+/* ... (h2, p, .field styles yahaan) ... */
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #0f3d91;
+}
+.login-container p {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 0.95rem;
+}
+.field {
+  margin-bottom: 15px;
+  position: relative;
+}
+.field input {
+  width: 100%;
+  padding: 10px 40px 10px 12px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+}
+.field input:focus {
+  border-color: #0f3d91;
+  box-shadow: 0 0 5px rgba(15,61,145,0.3);
+}
+
+.validation-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+.validation-icon.valid {
+  display: block;
+  color: green;
+}
+.validation-icon.invalid {
+  display: block;
+  color: red;
+}
+
+.password-field i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #0f3d91;
+}
+
+.password-field .validation-icon {
+  right: 40px; /* Thodi jagah bana di */
+}
+
+.remember-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+.remember-row label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #333;
+}
+.remember-row a {
+  color: #0f3d91;
+  text-decoration: none;
+}
+.remember-row a:hover {
+  text-decoration: underline;
+}
+
+/* NEW: Text CAPTCHA Styles */
+.captcha-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.text-captcha-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  position: relative; /* Validation icon ke liye */
+}
+
+#captcha-text {
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-decoration: line-through wavy red 1px; /* Distortion */
+  user-select: none; /* Text select na ho sake */
+  color: #333;
+}
+
+#captcha-refresh-btn {
+  padding: 8px 10px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #0f3d91;
+  transition: background 0.2s;
+}
+#captcha-refresh-btn:hover {
+  background: #e0e0e0;
+}
+
+#captcha-input {
+  flex-grow: 1; /* Bachi hui jagah le lega */
+  padding: 10px 0px 10px 12px !important; /* !important to override .field input */
+  font-size: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  text-transform: none; /* Browser ko auto-capitalize na karne dein */
+}
+#captcha-validation-icon {
+  right: 12px; /* Input field ke andar */
+}
+
+/* Login Button Styles */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #0f3d91;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button:hover {
+  background: #0b2b6f;
+}
+.spinner-icon {
+  font-size: 1.1rem;
+}
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+.login-link a {
+  color: #0f3d91;
+  text-decoration: none;
+}
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* "OR" Separator */
+.separator {
+  text-align: center;
+  margin: 20px 0;
+  color: #888;
+  position: relative;
+}
+.separator span {
+  background: #fff; /* White bg form se match karega */
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+}
+.separator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  z-index: 0;
+}
+
+/* Social Login Buttons */
+.social-login-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.social-login-btn {
+  padding: 10px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.social-login-btn i {
+  font-size: 1.2rem;
+}
+
+/* UPDATED: Google Button Style */
+.social-login-btn.google {
+  background: #f9f9f9; /* Halka grey, white se alag dikhega */
+  border: 1px solid #ddd;
+  color: #444; /* Darker text for visibility */
+}
+.social-login-btn.google:hover {
+  background: #f1f1f1;
+}
+.social-login-btn.google i {
+  color: #DB4437; /* Google Red */
+}
+
+.social-login-btn.facebook {
+  background: #1877F2; /* Facebook Blue */
+  color: white;
+  border-color: #1877F2;
+}
+.social-login-btn.facebook:hover {
+  background: #166fe5;
+}
+
+.msg {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+.msg i {
+  margin-right: 6px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .login-container {
+    margin: 40px 20px;
+    padding: 25px 20px;
+  }
+  #captcha-text {
+    font-size: 1rem;
+    padding: 8px 6px;
+    letter-spacing: 1px;
+  }
+}

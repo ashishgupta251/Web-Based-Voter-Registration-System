@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verify - Voter Service Panel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/verify.css" />
+  <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="css/dark-theme.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">Voter Service Panel</div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="verify.html" class="active">Verify</a></li>
+      </ul>
+    </nav>
+    <i class="fa-solid fa-bars hamburger" id="hamburger"></i>
+  </header>
+
+  <main>
+    <div class="login-container">
+      <form id="verify-form">
+        <h2>Verify Your Account</h2>
+        <p>Enter the 6-digit code sent to your registered email or mobile number.</p>
+
+        <div class="field">
+          <input type="text" id="verify-id" placeholder="Email or Mobile Number" required />
+        </div>
+
+        <label class="otp-label">Verification Code</label>
+        <div class="otp-container" id="otp-container">
+          <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
+          <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
+          <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
+          <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
+          <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
+          <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
+        </div>
+
+        <div class="btn-container">
+          <button type="submit" id="verify-btn">
+            <span class="btn-text">Verify</span>
+            <i class="fa-solid fa-spinner fa-spin spinner-icon" style="display: none;"></i>
+          </button>
+        </div>
+
+        <div class="resend-container">
+          <p>Didn't get the code? <button type="button" id="resend-btn">Resend Code</button></p>
+        </div>
+
+        <div id="msg" class="msg"></div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Voter Service Panel</h3>
+        <p>Your trusted digital platform for voter registration, verification, and election-related services.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="verify.html">Verify</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fa-solid fa-envelope"></i> support@voterservice.gov.in</p>
+        <p><i class="fa-solid fa-phone"></i> +91 ***** *****</p>
+        <p><i class="fa-solid fa-location-dot"></i> Jaipur, Rajasthan, India</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Voter Service Panel. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/verify.js"></script>
+  <script src="js/chat-widget.js"></script> 
+
+</body>
+</html>
